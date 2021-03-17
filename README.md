@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [View Code](https://github.com/Rabin92/blogr-landing-page)
-- Live Site URL: [Go Live](https://your-live-site-url.com)
+- Live Site URL: [Go Live](https://blogr.vercel.app)
 
 ## My process
 
