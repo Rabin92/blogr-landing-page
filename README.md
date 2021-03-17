@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Rabin92/blogr-landing-page)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [View Code](https://github.com/Rabin92/blogr-landing-page)
+- Live Site URL: [Go Live](https://your-live-site-url.com)
 
 ## My process
 
