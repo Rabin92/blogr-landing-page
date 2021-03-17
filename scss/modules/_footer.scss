@@ -1,0 +1,55 @@
+// ==========================================================================
+// Footer Section
+// ==========================================================================
+
+.footer {
+  text-align: $text--center;
+  margin-top: $footer--mt;
+
+  @media #{$break--m} {
+    @include flexy($j-content: space-around, $a-items: null);
+    margin-top: em(30px);
+  }
+
+  @include e(logo) {
+    margin-bottom: em(100px);
+  }
+
+  @include e(column-section-list) {
+    margin-bottom: em(40px);
+
+    @media #{$break--m} {
+      margin-bottom: em(15px);
+    }
+  }
+
+  @include e(column-section-item) {
+    padding-bottom: 0.45em;
+
+    a {
+      font-weight: $font-weight--light;
+    }
+
+    &:nth-child(n + 2) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    @include m(mod) {
+      color: $white;
+    }
+
+    &:first-child {
+      margin-bottom: $mb;
+
+      a {
+        color: $white;
+      }
+    }
+
+    a {
+      color: $footer--text-col;
+    }
+  }
+}

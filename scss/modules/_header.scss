@@ -1,0 +1,42 @@
+// ==========================================================================
+// Header Section
+// ==========================================================================
+
+.header {
+  margin-top: em(25px);
+  position: relative;
+
+  @include flexy($j-content: space-between);
+
+  @media #{$break--m} {
+    @include flexy($dsp: block);
+
+    @include e(content) {
+      @include flexy();
+    }
+  }
+}
+
+.intro {
+  color: $white;
+  text-align: $text--center;
+  padding-top: em(60px);
+
+  @include e(title) {
+    font-size: 2rem;
+
+    @media #{$break--m} {
+      font-size: 3.125rem;
+      line-height: 0.2;
+    }
+  }
+
+  @include e(subtitle) {
+    margin-bottom: em(35px);
+    font-size: 1.25rem;
+
+    @include m(col) {
+      color: $white;
+    }
+  }
+}

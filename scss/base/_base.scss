@@ -1,0 +1,106 @@
+// ==========================================================================
+// Base Styles
+// ==========================================================================
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-family--primary;
+  font-weight: $font-weight--medium;
+  font-size: $base__font-size;
+  line-height: ($base__line/$base__font-size);
+}
+
+header {
+  position: relative;
+  border: 1px solid transparent;
+  background-image: linear-gradient(
+    to bottom,
+    $gradient--col-one,
+    $gradient--col-two
+  );
+  padding: 0 $gutters em(100px);
+  border-radius: 0 0 0 $br--radius;
+
+  @media #{$break--m} {
+    border-radius: 0 0 0 em(60px);
+  }
+
+  z-index: 1;
+  // overflow-y: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: url('#{$path--rel}/bg-pattern-intro.svg') no-repeat;
+    background-position: top 34% left 35%;
+    background-size: 366%;
+    border-radius: 0 0 0 90px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    @media #{$break--s} {
+      background-position: top 50% left 20%;
+      background-size: 190%;
+    }
+  }
+}
+
+main {
+  margin-top: em(60px);
+  text-align: $text--center;
+}
+
+footer {
+  font-family: $font-family--secondary;
+  font-weight: $font-weight--light;
+  background-color: $footer-bck-col;
+  border-radius: 0 $br--radius 0 0;
+  margin-top: $footer--mt;
+  padding: $gutters;
+
+  @media #{$break--l} {
+    margin-top: em(170px);
+  }
+}
+
+h2 {
+  color: $headline;
+}
+
+p {
+  color: $body--col;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+  font-weight: $font-weight--bold;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Lists
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+// Button
+button {
+  outline: 0;
+  border: none;
+}

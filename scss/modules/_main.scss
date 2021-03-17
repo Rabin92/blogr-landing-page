@@ -1,0 +1,236 @@
+// ==========================================================================
+// Main Section
+// ==========================================================================
+
+.content {
+  padding: $gutters;
+
+  @include e(wrap) {
+    @media #{$break--m} {
+      @include flexy($a-items: null);
+    }
+  }
+
+  @include e(img) {
+    flex: 1;
+    order: 2;
+    position: relative;
+
+    &::before {
+      content: '';
+      background: url('#{$path--rel}/illustration-editor-mobile.svg') center
+        no-repeat;
+      background-size: 300px;
+      width: 100%;
+      height: 17em;
+      display: inline-block;
+
+      @media #{$break--m} {
+        position: absolute;
+        background: url('#{$path--rel}/illustration-editor-desktop.svg')
+          no-repeat;
+        background-position: center;
+        left: 30%;
+        top: -50%;
+        width: 140%;
+        background-size: 100%;
+        height: 50em;
+      }
+    }
+  }
+
+  @include e(headline) {
+    margin-bottom: em(30px);
+
+    @media #{$break--m} {
+      font-size: 2rem;
+    }
+  }
+
+  @include e(title) {
+    margin-bottom: $mb;
+  }
+
+  @include e(row) {
+    @media #{$break--m} {
+      flex: 1;
+      order: 1;
+      text-align: left;
+    }
+  }
+
+  @include e(inner-row) {
+    margin-top: $mt;
+  }
+}
+
+// ==========================================================================
+// Hero Section
+// ==========================================================================
+
+.hero-section {
+  margin-top: em(280px);
+
+  background-image: linear-gradient(
+    to right,
+    $body-gradient--col-one,
+    $body-gradient--col-two
+  );
+
+  @media #{$break--m} {
+    margin-top: em(300px);
+  }
+
+  padding-bottom: em(80px);
+
+  @media #{$break--m} {
+    padding-bottom: initial;
+  }
+
+  border-radius: 0 $br--radius 0 $br--radius;
+}
+
+.hero {
+  @media #{$break--m} {
+    @include flexy();
+  }
+
+  @include e(img) {
+    position: relative;
+    height: em(180px);
+
+    @media #{$break--m} {
+      min-height: em(350px);
+    }
+
+    @media #{$break--m} {
+      flex: 1;
+    }
+
+    &::before {
+      content: '';
+      background: url('#{$path--rel}/bg-pattern-circles.svg') no-repeat;
+      position: absolute;
+      right: 0;
+      background-size: 170%;
+      background-position: center 110%;
+      height: 210%;
+      left: 0;
+      border-radius: 0 $br--radius 0 0;
+
+      @media #{$break--m} {
+        background-size: 100%;
+        background-position: left 30% top 85%;
+        left: -70%;
+        border-radius: 0 0 $br--radius 0;
+        height: 100%;
+        width: 195%;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -130%;
+      left: 0;
+      height: 250%;
+      width: 100%;
+      background: url('#{$path--rel}/illustration-phones.svg') no-repeat;
+      background-size: 90%;
+      background-position: center;
+
+      @media #{$break--xs} {
+        background-size: 60%;
+      }
+
+      @media #{$break--m} {
+        height: 145%;
+        top: -20%;
+        background-size: 90%;
+      }
+    }
+  }
+
+  @include e(wrap) {
+    padding: $gutters;
+    position: relative;
+
+    @media #{$break--m} {
+      flex: 1;
+      text-align: left;
+      margin-left: (50px);
+    }
+  }
+
+  @include e(heading) {
+    margin-bottom: $mb;
+    font-size: 2.1875rem;
+
+    @include m(col) {
+      color: $white;
+    }
+  }
+
+  @include e(subheading) {
+    @include m(col) {
+      color: $white;
+    }
+  }
+}
+
+// ==========================================================================
+// Feature Section
+// ==========================================================================
+.feature {
+  margin-top: $mt;
+  padding: $gutters;
+
+  @media #{$break--m} {
+    @include flexy();
+    margin-top: em(200px);
+  }
+
+  @include e(img) {
+    height: em(380px);
+    position: relative;
+
+    @media #{$break--m} {
+      flex: 1;
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      background: url('#{$path--rel}/illustration-laptop-mobile.svg') center
+        no-repeat;
+      width: 100%;
+      height: 100%;
+
+      @media #{$break--m} {
+        background: url('#{$path--rel}/illustration-laptop-desktop.svg') center
+          no-repeat;
+        position: absolute;
+        height: 50em;
+        right: 24%;
+        top: -60%;
+        width: 150%;
+        background-size: 100%;
+      }
+    }
+  }
+
+  @include e(row) {
+    @media #{$break--m} {
+      flex: 1;
+      text-align: left;
+    }
+  }
+
+  @include e(title) {
+    margin-bottom: $mb;
+  }
+
+  @include e(inner-row) {
+    margin-top: $mt;
+  }
+}

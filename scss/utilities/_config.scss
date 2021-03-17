@@ -1,0 +1,67 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font Stacks
+
+$font-url--primary: 'https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap';
+$font-family--primary: 'Overpass', sans-serif;
+
+$font-url--secondary: 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap';
+$font-family--secondary: 'Ubuntu', sans-serif;
+
+// Font Weights
+$font-weight--light: 300;
+$font-weight--medium: 500;
+$font-weight--semi-bold: 600;
+$font-weight--bold: 700;
+
+// Descriptive Base Colors
+$white: #fff;
+$black: #000;
+$carnation: #ff525d;
+$geraldine: #ff7a85;
+$cello: #1f3f5b;
+$frenchGray: #c8c8cb;
+$riverBed: #4b5862;
+$shark: #25252d;
+$salmon: #ff8f70;
+$radicalRed: #ff3d54;
+$charade: #2c2d3f;
+$fiord: #3f4164;
+
+// Color usage
+$cta--text-col: $carnation;
+$btn--hover: $geraldine;
+$headline: $cello;
+$footer--text-col: $frenchGray;
+$body--col: $riverBed;
+$footer-bck-col: $shark;
+
+$gradient--col-one: $salmon;
+$gradient--col-two: $radicalRed;
+
+$body-gradient--col-one: $charade;
+$body-gradient--col-two: $fiord;
+
+// Text
+$base__font-size: 16px;
+$base__line: 24px;
+$text--center: center;
+
+// Path to Assets
+$path--rel: '../images';
+
+// Gutters
+$gutters: 1em;
+
+// Cursor
+$cursor: pointer;
+
+$outline: none;
+
+// Media queries
+$break--xs: '(min-width: 31.25rem)';
+$break--s: '(min-width: 37.5rem)';
+$break--m: '(min-width: 48rem)';
+$break--l: '(min-width: 64rem)';

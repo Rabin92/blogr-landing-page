@@ -1,0 +1,179 @@
+// ==========================================================================
+// Nav Section
+// ==========================================================================
+
+.nav {
+  background-color: $white;
+  position: absolute;
+  top: 120%;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+  @media #{$break--m} {
+    position: static;
+    background-color: none;
+    box-shadow: initial;
+    background-color: inherit;
+
+    @include flexy();
+  }
+
+  padding: $gutters;
+
+  @include e(dropdown) {
+    margin: $gutters 0 1.2em;
+    padding: 0 $gutters;
+
+    @media #{$break--m} {
+      margin: initial;
+      position: relative;
+    }
+
+    &:nth-child(3) {
+      margin-bottom: 40px;
+
+      @media #{$break--m} {
+        margin-bottom: initial;
+      }
+    }
+  }
+
+  @include e(link) {
+    @include flexy($j-content: center);
+
+    font-family: $font-family--secondary;
+    font-weight: $font-weight--medium;
+    color: $cello;
+    outline: $outline;
+    font-size: 1.125rem;
+
+    @media #{$break--m} {
+      color: $white;
+      font-size: initial;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:focus {
+      color: lighten($riverBed, 10%);
+
+      @media #{$break--m} {
+        color: $white;
+      }
+
+      &::after {
+        transform: rotate(180deg);
+        transition: transform 500ms ease-in-out;
+      }
+    }
+
+    &::after {
+      content: '';
+      background: url('#{$path--rel}/icon-arrow-dark.svg') no-repeat;
+      display: inline-block;
+      width: em(12px);
+      height: em(6px);
+      margin-left: em(6px);
+      transition: all 500ms ease-in-out;
+
+      @media #{$break--m} {
+        background: url('#{$path--rel}/icon-arrow-light.svg') no-repeat;
+      }
+    }
+
+    &:focus + .nav__list {
+      display: block;
+      animation: fadeIn 500ms ease-in-out forwards;
+    }
+  }
+
+  @include e(list) {
+    background-color: lighten($frenchGray, 15%);
+    text-align: $text--center;
+    margin-top: em(15px);
+    padding: $gutters 2em;
+    border-radius: 5px;
+    display: none;
+
+    @media #{$break--m} {
+      position: absolute;
+    }
+  }
+
+  @include e(item) {
+    padding-bottom: 0.85em;
+
+    a {
+      color: $riverBed;
+      font-weight: $font-weight--light;
+      font-family: $font-family--secondary;
+    }
+
+    a {
+      &:hover {
+        color: $shark;
+        font-weight: $font-weight--semi-bold;
+      }
+
+      &::after {
+        content: attr(data-text);
+        display: block;
+        font-weight: $font-weight--semi-bold;
+        height: 0;
+        visibility: hidden;
+        overflow: hidden;
+        padding: 0 0.1em 0;
+      }
+    }
+  }
+}
+
+/* ***************************** HORIZONTAL LINE **************************** */
+
+hr {
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: em(20px);
+  border: 1px thin $riverBed;
+
+  @media #{$break--m} {
+    display: none;
+  }
+}
+
+/* ******************************** ANIMATION ******************************* */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ************************ ADD ACTIVE CLASS ON CLICK *********************** */
+
+.active .line-1 {
+  transform-origin: center center;
+  transform: rotate(45deg) translate(-1px, 15px);
+  transition: all 0.5s ease-in-out;
+}
+.active .line-2 {
+  transform: translateX(20px);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.active .line-3 {
+  transform-origin: center center;
+  transform: rotate(-45deg) translate(-4px, -5px);
+  transition: all 0.5s ease-in-out;
+}
+
+// svg {
+//   border: 1px solid red;
+// }
