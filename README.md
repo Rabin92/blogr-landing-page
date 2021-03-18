@@ -15,8 +15,6 @@ This is a solution to the [Blogr landing page challenge on Frontend Mentor](http
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -48,11 +46,11 @@ Users should be able to:
 
 ### What I learned
 
-I learned how to create a dropdown sub-menu using a vanilla CSS.
+I learned how to create a dropdown menu using a vanilla CSS.
 
 ### Continued development
 
-I will continue learning about positioning background image as I am still not fully comfortable with this concept.
+I will continue learning about background-position as I am still not fully comfortable with this concept.
 
 ### Useful resources
 
