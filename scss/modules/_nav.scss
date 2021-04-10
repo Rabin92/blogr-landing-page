@@ -25,6 +25,11 @@
     margin: $gutters 0 1.2em;
     padding: 0 $gutters;
 
+    &:focus-within .nav__list {
+      visibility: visible;
+      animation: fadeIn 500ms ease-in-out forwards;
+    }
+
     @media #{$break--m} {
       margin: initial;
       position: relative;
@@ -57,7 +62,7 @@
       }
     }
 
-    &:focus {
+    &:focus-within {
       color: lighten($riverBed, 10%);
 
       @media #{$break--m} {
@@ -83,11 +88,6 @@
         background: url('#{$path--rel}/icon-arrow-light.svg') no-repeat;
       }
     }
-
-    &:focus + .nav__list {
-      display: block;
-      animation: fadeIn 500ms ease-in-out forwards;
-    }
   }
 
   @include e(list) {
@@ -96,7 +96,7 @@
     margin-top: em(15px);
     padding: $gutters 2em;
     border-radius: 5px;
-    display: none;
+    visibility: hidden;
 
     @media #{$break--m} {
       position: absolute;
