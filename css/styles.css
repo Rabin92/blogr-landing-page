@@ -391,6 +391,10 @@ button {
   margin: 1em 0 1.2em;
   padding: 0 1em;
 }
+.nav__dropdown:focus-within .nav__list {
+  visibility: visible;
+  animation: fadeIn 500ms ease-in-out forwards;
+}
 @media (min-width: 48rem) {
   .nav__dropdown {
     margin: initial;
@@ -424,15 +428,15 @@ button {
     text-decoration: underline;
   }
 }
-.nav__link:focus {
+.nav__link:focus-within {
   color: #61727f;
 }
 @media (min-width: 48rem) {
-  .nav__link:focus {
+  .nav__link:focus-within {
     color: #fff;
   }
 }
-.nav__link:focus::after {
+.nav__link:focus-within::after {
   transform: rotate(180deg);
   transition: transform 500ms ease-in-out;
 }
@@ -450,17 +454,13 @@ button {
     background: url("../images/icon-arrow-light.svg") no-repeat;
   }
 }
-.nav__link:focus + .nav__list {
-  display: block;
-  animation: fadeIn 500ms ease-in-out forwards;
-}
 .nav__list {
   background-color: #efeff0;
   text-align: center;
   margin-top: 0.9375em;
   padding: 1em 2em;
   border-radius: 5px;
-  display: none;
+  visibility: hidden;
 }
 @media (min-width: 48rem) {
   .nav__list {
