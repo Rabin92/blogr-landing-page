@@ -392,7 +392,7 @@ button {
   padding: 0 1em;
 }
 .nav__dropdown:focus-within .nav__list {
-  visibility: visible;
+  display: block;
   animation: fadeIn 500ms ease-in-out forwards;
 }
 @media (min-width: 48rem) {
@@ -460,7 +460,7 @@ button {
   margin-top: 0.9375em;
   padding: 1em 2em;
   border-radius: 5px;
-  visibility: hidden;
+  display: none;
 }
 @media (min-width: 48rem) {
   .nav__list {
