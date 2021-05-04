@@ -26,7 +26,7 @@
     padding: 0 $gutters;
 
     &:focus-within .nav__list {
-      visibility: visible;
+      display: block;
       animation: fadeIn 500ms ease-in-out forwards;
     }
 
@@ -96,7 +96,7 @@
     margin-top: em(15px);
     padding: $gutters 2em;
     border-radius: 5px;
-    visibility: hidden;
+    display: none;
 
     @media #{$break--m} {
       position: absolute;
